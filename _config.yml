@@ -1,0 +1,40 @@
+title: Fyne Addons
+email: info@fyne.io
+url: "https://addons.fyne.io"
+
+remote_theme: gdgmanagua/jekyll-mdl
+
+header_type: default
+post_type: highlight
+
+disqus: true
+disqus_shortname: 'fyne-addons'
+
+more_vert:
+  option1:
+    name: Submit Component
+    link: https://developer.fyne.io/submit-addon/
+
+collections:
+  addons:
+    output: true
+  categories:
+    output: true
+    permalink: /category/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "addons"
+    values:
+      layout: "addon"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+

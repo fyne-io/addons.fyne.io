@@ -1,0 +1,40 @@
+---
+layout: none
+---
+[
+{%- assign addonlist = site.addons | sort: 'title' -%}
+{%- for app in addonlist -%}
+{%- assign app_url = app.url | absolute_url  -%}
+{% if app.disabled %}
+  {% continue %}
+{% endif %}
+{
+  "id": "{{ app.id }}",
+  "name": "{{ app.title | escape }}",
+  "icon": "{{ app.image }}",
+  "summary": "{{ app.excerpt | escape }}",
+  "url": "{{ app.url | absolute_url  }}",
+
+  "requires": "{{ app.requires }}",
+  "category": "{{ app.category }}",
+  "website": "{{ app.home }}",
+  "developer": "{{ app.developer }}",
+
+  "screenshots": [
+{%- for img in app.screenshots %}
+    {
+      "image": "{{ img.url }}",
+      "type": "desktop"
+    }{%- unless forloop.last %},{% endunless %}
+{%- endfor %}
+  ],
+  "source": {
+    "git": "{{ app.git }}",
+    "package": "{{ app.package }}"
+  },
+  "version": "{{ app.version }}",
+  "date": "{{ app.date | date_to_xmlschema }}"
+} 
+{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+]
