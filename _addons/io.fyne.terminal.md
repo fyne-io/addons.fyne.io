@@ -1,6 +1,5 @@
 ---
 id: io.fyne.terminal
-requires: linux,darwin,windows
 
 title: Terminal
 home: https://github.com/fyne-io/terminal
