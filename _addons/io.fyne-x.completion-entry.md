@@ -13,7 +13,7 @@ category:  widgets
 developer: Patrice Ferlet
 
 git: https://github.com/fyne-io/fyne-x.git
-package: github.com/fyne-io/fyne-x/widget
+package: fyne.io/x/fyne/widget
 version: 1.0.0
 ---
 
