@@ -1,5 +1,5 @@
 ---
-appid: io.fyne-x.completion-entry
+addonid: io.fyne-x.completion-entry
 
 title: CompletionEntry
 home: https://www.metal3d.org

@@ -1,5 +1,5 @@
 ---
-appid: io.github.dweymouth.fyne-lyrics
+addonid: io.github.dweymouth.fyne-lyrics
 
 title: LyricsViewer
 home: https://github.com/dweymouth/fyne-lyrics

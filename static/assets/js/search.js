@@ -97,7 +97,7 @@ MIT Licensed
 		if (matchingPosts.length && currentResultHash !== lastSearchResultHash) {
 			searchResultsEl.classList.remove('is-hidden');
 			searchResultsEl.innerHTML = matchingPosts.map(function (post) {
-				return '<a class="app-card bg-neutral-800" href="'+post.link+'"><img src="'+post.icon+'" loading="lazy" alt="app icon" style="width:72px;height:72px;object-fit:contain"><div><h5 class="text-lg font-semibold">'+post.title+'</h5><p class="text-sm text-neutral-400">'+post.excerpt+'</p></div></a>'
+				return '<a class="addon-card bg-neutral-800" href="'+post.link+'"><img src="'+post.icon+'" loading="lazy" alt="addon icon" style="width:72px;height:72px;object-fit:contain"><div><h5 class="text-lg font-semibold">'+post.title+'</h5><p class="text-sm text-neutral-400">'+post.excerpt+'</p></div></a>'
 		
 			}).join('');
 		}

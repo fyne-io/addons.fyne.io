@@ -1,5 +1,5 @@
 ---
-appid: com.github.bytemystery-com.colorlabel
+addonid: com.github.bytemystery-com.colorlabel
 
 title: colorlabel
 home: https://github.com/bytemystery-com

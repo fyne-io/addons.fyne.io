@@ -1,4 +1,4 @@
-{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.addonid" "!=" nil -}}
 {{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true }}<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>

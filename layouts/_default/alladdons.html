@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.addonid" "!=" nil -}}
 {{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
 {{- $sorted := sort $enabledAddons ".Title" -}}
 {{ partial "nav.html" . }}

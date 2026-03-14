@@ -1,5 +1,5 @@
 ---
-appid: com.github.sdassow.fyne-datepicker
+addonid: com.github.sdassow.fyne-datepicker
 
 title: DatePicker
 home: https://github.com/sdassow/fyne-datepicker

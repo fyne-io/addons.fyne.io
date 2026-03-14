@@ -1,5 +1,5 @@
 ---
-appid: berlin.martyn.waveform
+addonid: berlin.martyn.waveform
 
 title: waveform
 home: https://musings.martyn.berlin

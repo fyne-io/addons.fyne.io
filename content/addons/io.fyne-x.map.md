@@ -1,5 +1,5 @@
 ---
-appid: io.fyne-x.map
+addonid: io.fyne-x.map
 
 title: Map
 home: https://github.com/fyne-io/fyne-x

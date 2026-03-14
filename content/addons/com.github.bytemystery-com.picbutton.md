@@ -1,5 +1,5 @@
 ---
-appid: com.github.bytemystery-com.picbutton
+addonid: com.github.bytemystery-com.picbutton
 
 title: PicButton
 home: https://github.com/bytemystery-com

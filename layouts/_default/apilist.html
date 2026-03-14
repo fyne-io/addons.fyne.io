@@ -1,11 +1,11 @@
-{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.addonid" "!=" nil -}}
 {{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
 {{- $sorted := sort $enabledAddons ".Title" -}}
 [
 {{- range $idx, $addon := $sorted -}}
 {{- if $idx }},{{ end }}
 {
-  "id": "{{ $addon.Params.appid }}",
+  "id": "{{ $addon.Params.addonid }}",
   "name": {{ $addon.Title | jsonify }},
   "icon": "{{ $addon.Params.icon }}",
   "summary": {{ $addon.Params.excerpt | jsonify }},

@@ -1,6 +1,6 @@
 {{- $currentTitle := .Title -}}
 {{- $currentCategory := .Params.category -}}
-{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.addonid" "!=" nil -}}
 {{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
 
 <div class="max-w-5xl mx-auto px-4 mb-8">
@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="results-container results-container-closed" id="results-container">
-    <div class="apps-grid" id="search-results">
+    <div class="addons-grid" id="search-results">
     </div>
   </div>
 </div>

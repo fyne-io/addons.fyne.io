@@ -1,5 +1,5 @@
 ---
-appid: io.fyne.terminal
+addonid: io.fyne.terminal
 
 title: Terminal
 home: https://github.com/fyne-io/terminal

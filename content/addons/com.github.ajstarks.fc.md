@@ -1,5 +1,5 @@
 ---
-appid: com.github.ajstarks.fc
+addonid: com.github.ajstarks.fc
 
 title: fc
 home: https://github.com/ajstarks/fc

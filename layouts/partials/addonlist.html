@@ -1,7 +1,7 @@
 {{- $addonlist := .addonlist -}}
 {{- $limit := .limit | default 0 -}}
 <div class="max-w-5xl mx-auto px-4">
-  <div class="apps-grid">
+  <div class="addons-grid">
   {{- $i := 0 -}}
   {{- range $addonlist -}}
     {{- if .Params.disabled -}}

@@ -1,5 +1,5 @@
 ---
 title: "All Add-ons"
-layout: "allapps"
+layout: "alladdons"
 url: /all.html
 ---
