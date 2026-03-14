@@ -1,17 +1,17 @@
 {{ define "main" }}
+
+{{/* Hero header */}}
+<div class="addon-hero">
+  <div class="addon-hero-bg" style="background-image: url({{ .Params.icon }});"></div>
+  <div class="addon-hero-content max-w-5xl mx-auto px-4">
+    <span class="text-xs uppercase tracking-widest" style="color: rgba(255,255,255,0.5);">{{ .Params.category }}</span>
+    <h1 class="text-5xl md:text-7xl font-bold text-white mt-2">{{ .Title }}</h1>
+    <p class="text-lg mt-3" style="color: rgba(255,255,255,0.7);">{{ .Params.excerpt }}</p>
+    <p class="text-sm mt-2" style="color: rgba(255,255,255,0.45);">by {{ .Params.developer }}</p>
+  </div>
+</div>
+
 <div class="max-w-5xl mx-auto px-4">
-
-  {{/* Title Area */}}
-  <div class="flex items-center gap-6 mt-12 mb-12 max-sm:flex-col max-sm:items-start max-sm:gap-3 max-sm:mt-6">
-    <img src="{{ .Params.icon }}" loading="lazy" alt="addon icon" class="app-icon-img" onerror="this.style.display='none'">
-    <h1 class="text-5xl md:text-7xl font-semibold">{{ .Title }}</h1>
-  </div>
-
-  {{/* Developer */}}
-  <div class="mb-6">
-    <h5 class="font-semibold mb-1">Developer</h5>
-    <p class="text-neutral-400">{{ .Params.developer }}</p>
-  </div>
 
   {{/* About */}}
   <div class="mb-6">

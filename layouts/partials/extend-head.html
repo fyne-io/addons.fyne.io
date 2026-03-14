@@ -56,29 +56,70 @@ html:not(.dark) body::before {
   .apps-grid { grid-template-columns: 1fr; }
 }
 
-/* App card */
-.app-card {
+/* Addon card */
+.addon-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  justify-content: flex-end;
+  min-height: 240px;
   border: 1px solid rgba(128,128,128,0.2);
   border-radius: 0.5rem;
+  overflow: hidden;
   text-decoration: none;
-  transition: box-shadow 300ms ease;
+  transition: box-shadow 300ms ease, transform 200ms ease;
+  background-color: rgb(30,30,30);
 }
-.app-card:hover {
-  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+.addon-card:hover {
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+.addon-card-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.addon-card-text {
+  position: relative;
+  padding: 1.25rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
 }
 
-/* App icon in cards and detail */
-.app-icon-img {
-  width: 128px;
-  height: 128px;
-  object-fit: contain;
+/* Addon detail hero */
+.addon-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  border-radius: 1rem;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-@media (max-width: 991px) {
-  .app-icon-img { width: 72px; height: 72px; }
+.addon-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  filter: blur(3px) brightness(0.65);
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+.addon-hero-content {
+  position: relative;
+  width: 100%;
+  padding-top: 6rem;
+  padding-bottom: 2.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
+}
+@media (max-width: 767px) {
+  .addon-hero { min-height: 240px; }
+  .addon-hero-content { padding-top: 4rem; padding-bottom: 1.5rem; }
 }
 
 /* Screenshot styling */
