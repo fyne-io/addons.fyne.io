@@ -1,0 +1,180 @@
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XKWZT3GEH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8XKWZT3GEH');
+</script>
+
+<link href='//fonts.googleapis.com/css?family=Poppins:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+<style>
+/* Hero background behind top of page */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 800px;
+  background-image: linear-gradient(135deg, rgba(10,14,42,0.75) 0%, rgba(3,7,108,0.7) 50%, rgba(26,31,78,0.75) 100%),
+              url(/img/header-toolkit.jpg);
+  background-size: cover, auto 125%;
+  background-position: center, center bottom;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+}
+html:not(.dark) body::before {
+  background-image: linear-gradient(135deg, rgba(200,210,240,0.5) 0%, rgba(180,195,235,0.45) 50%, rgba(200,210,240,0.5) 100%),
+              url(/img/header-toolkit.jpg);
+}
+.article-content {
+  max-width: none !important;
+}
+
+#single_header {
+  max-width: none !important;
+}
+
+.min-h-\[148px\] {
+  min-height: 72px !important;
+}
+
+/* App card grid */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 991px) {
+  .apps-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .apps-grid { grid-template-columns: 1fr; }
+}
+
+/* App card */
+.app-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(128,128,128,0.2);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: box-shadow 300ms ease;
+}
+.app-card:hover {
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* App icon in cards and detail */
+.app-icon-img {
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}
+@media (max-width: 991px) {
+  .app-icon-img { width: 72px; height: 72px; }
+}
+
+/* Screenshot styling */
+.screenshot {
+  border: 1px solid rgba(128,128,128,0.2);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Code blocks in addon detail */
+.install-code {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-family: 'Source Code Pro', ui-monospace, monospace;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Filter dropdowns */
+.filter-dropdown {
+  position: relative;
+}
+.filter-dropdown-list {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  min-width: 200px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+.filter-dropdown:hover .filter-dropdown-list {
+  display: block;
+}
+.filter-dropdown-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: background-color 300ms ease;
+}
+.filter-dropdown-link:hover {
+  background-color: rgb(var(--color-primary-500));
+  color: #fff;
+}
+
+/* Filter tab buttons */
+.filter-tab {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  transition: color 300ms ease;
+}
+.filter-tab-active {
+  border-bottom-color: rgb(var(--color-primary-500));
+  color: rgb(var(--color-primary-500));
+}
+
+/* Search */
+.search-input-open {
+  visibility: visible;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  width: 248px;
+  height: 38px;
+  transition: all .1s ease-in;
+  background-color: rgba(128,128,128,0.15);
+  color: inherit;
+}
+.search-input-open:focus {
+  outline: none;
+}
+.search-input-closed {
+  padding: 0;
+  border: none;
+  height: 38px;
+  width: 0;
+  transition: all .2s ease-out;
+}
+.results-container {
+  z-index: 999;
+  background-color: rgb(23, 23, 23);
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.results-container-closed {
+  max-height: 0;
+}
+.results-container-open {
+  max-height: 800px;
+}
+</style>

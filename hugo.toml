@@ -1,0 +1,99 @@
+baseURL = "https://addons.fyne.io"
+languageCode = "en"
+title = "Fyne Add-ons"
+theme = "blowfish"
+copyright = "Fyne.io"
+buildFuture = true
+enableRobotsTXT = true
+
+[params]
+  description = "Add-on widgets and containers for the Fyne toolkit"
+  mainSections = []
+  colorScheme = "ocean"
+  defaultAppearance = "dark"
+  autoSwitchAppearance = false
+  enableSearch = false
+  showScrollToTop = true
+  showBreadcrumbs = false
+  updatedDays = 180
+
+  [params.homepage]
+    layout = "page"
+    showRecent = false
+
+  [params.article]
+    showDate = false
+    showAuthor = false
+    showBreadcrumbs = false
+    showTableOfContents = false
+    showRelatedContent = false
+    showTaxonomies = false
+    showWordCount = false
+    showEdit = false
+    showSummary = false
+    showPagination = false
+
+  [params.list]
+    showBreadcrumbs = false
+    showTableOfContents = false
+
+  [params.header]
+    layout = "fixed"
+
+  [params.footer]
+    showCopyright = true
+    showThemeAttribution = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[menus]
+  [[menus.main]]
+    name = "Docs"
+    url = "https://docs.fyne.io"
+    weight = 10
+  [[menus.main]]
+    name = "Apps"
+    url = "https://apps.fyne.io"
+    weight = 20
+  [[menus.main]]
+    name = "Add-ons"
+    url = "/"
+    weight = 30
+    [menus.main.params]
+      highlight = true
+  [[menus.main]]
+    name = "Conference"
+    url = "https://conf.fyne.io"
+    weight = 40
+  [[menus.main]]
+    name = "Blog"
+    url = "https://fyne.io/blog"
+    weight = 50
+  [[menus.main]]
+    name = "Events"
+    url = "https://fyne.io/events"
+    weight = 60
+  [[menus.main]]
+    name = "Support"
+    url = "https://fyne.io/support"
+    weight = 70
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    isPlainText = true
+
+  [outputFormats.APIJSON]
+    mediaType = "application/json"
+    baseName = "list"
+    isPlainText = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]

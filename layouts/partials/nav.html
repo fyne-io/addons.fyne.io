@@ -1,0 +1,44 @@
+{{- $currentTitle := .Title -}}
+{{- $currentCategory := .Params.category -}}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
+
+<div class="max-w-5xl mx-auto px-4 mb-8">
+  <div class="flex items-start justify-between">
+    <div class="w-2/3 max-md:w-full">
+      <h1 class="text-5xl md:text-7xl font-semibold">Add-ons</h1>
+      <p class="text-xl text-neutral-400 mt-2">Add-on widgets and containers for the Fyne toolkit.
+        <br><a href="https://docs.fyne.io/submit/addon" class="text-primary-400 hover:underline">Submit yours here</a>
+      </p>
+    </div>
+    <div class="flex items-center gap-1 cursor-pointer mt-4">
+      <img onclick="openSearch()" src="/assets/images/search.svg" loading="lazy" alt="Search" class="h-8 invert dark:invert-0 opacity-60 hover:opacity-100">
+      <input type="text" class="search-input-closed" maxlength="256" placeholder="Search..." id="js-search__input">
+    </div>
+  </div>
+  <div class="results-container results-container-closed" id="results-container">
+    <div class="apps-grid" id="search-results">
+    </div>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto px-4 mb-4">
+  <div class="flex flex-wrap gap-2 items-center">
+    <a href="/" class="filter-tab {{ if eq $currentTitle "Newest additions" }}filter-tab-active{{ end }}">Home</a>
+    <a href="/all.html" class="filter-tab {{ if eq $currentTitle "All Add-ons" }}filter-tab-active{{ end }}">All ({{ len $allAddons }})</a>
+
+    <div class="filter-dropdown">
+      <div class="filter-tab {{ if $currentCategory }}filter-tab-active{{ end }}">
+        <span>{{ if $currentCategory }}{{ $currentCategory | title }}{{ else }}Categories{{ end }}</span>
+        <svg class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <nav class="filter-dropdown-list bg-neutral-800 dark:bg-neutral-800">
+        {{- $categories := slice "widgets" "containers" -}}
+        {{- range $categories -}}
+          {{- $catAddons := where $enabledAddons ".Params.category" . -}}
+          <a class="filter-dropdown-link text-neutral-300" href="/category/{{ . }}">{{ . | title }} ({{ len $catAddons }})</a>
+        {{- end -}}
+      </nav>
+    </div>
+  </div>
+</div>

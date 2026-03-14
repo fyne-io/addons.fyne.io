@@ -1,0 +1,35 @@
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
+{{- $sorted := sort $enabledAddons ".Title" -}}
+[
+{{- range $idx, $addon := $sorted -}}
+{{- if $idx }},{{ end }}
+{
+  "id": "{{ $addon.Params.appid }}",
+  "name": {{ $addon.Title | jsonify }},
+  "icon": "{{ $addon.Params.icon }}",
+  "summary": {{ $addon.Params.excerpt | jsonify }},
+  "url": "{{ $addon.Permalink }}",
+
+  "requires": "{{ $addon.Params.requires }}",
+  "category": "{{ $addon.Params.category }}",
+  "website": "{{ $addon.Params.home }}",
+  "developer": "{{ $addon.Params.developer }}",
+
+  "screenshots": [
+{{- range $si, $img := $addon.Params.screenshots }}
+    {{ if $si }},{{ end }}{
+      "image": "{{ $img.url }}",
+      "type": "desktop"
+    }
+{{- end }}
+  ],
+  "source": {
+    "git": "{{ $addon.Params.git }}",
+    "package": "{{ $addon.Params.package }}"
+  },
+  "version": "{{ $addon.Params.version }}",
+  "date": "{{ $addon.Date.Format "2006-01-02T15:04:05-07:00" }}"
+}
+{{- end }}
+]

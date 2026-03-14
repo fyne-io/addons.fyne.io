@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{- $allAddons := where (where .Site.Pages "Section" "addons") ".Params.appid" "!=" nil -}}
+{{- $enabledAddons := where $allAddons ".Params.disabled" "!=" true -}}
+{{- $sorted := sort $enabledAddons ".Title" -}}
+{{ partial "nav.html" . }}
+{{ partial "addonlist.html" (dict "addonlist" $sorted) }}
+{{ end }}
