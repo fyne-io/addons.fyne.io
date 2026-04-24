@@ -7,7 +7,7 @@ icon: https://raw.githubusercontent.com/limafresh/messagebubble/main/demo.gif
 screenshots:
 - url: https://raw.githubusercontent.com/limafresh/messagebubble/main/demo.gif
 - url: https://github.com/user-attachments/assets/9c4d462d-af26-4b32-9393-760dd0d01c36
-- url: https://github.com/user-attachments/assets/84d973ca-0a73-4dd2-9005-56cbbb9c85eb
+- url: https://github.com/user-attachments/assets/31b52d41-d02d-4cd9-ab39-a950cf50c323
 
 date:      2026-04-23 17:27:00
 excerpt:   Modern message bubble widget
