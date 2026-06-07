@@ -14,7 +14,7 @@ category:  widgets
 developer: limafresh
 
 git: https://github.com/limafresh/messagebubble
-package: github.com/limafresh/messagebubble/v2
+package: github.com/limafresh/messagebubble/v3
 version:
 layout: "addon"
 ---
